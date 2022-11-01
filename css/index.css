@@ -35,6 +35,7 @@ body {
 .icons {
   display: flex;
   justify-content: flex-end;
+  gap: 15px;
   margin-right: 10%;
 }
 .icons img {
