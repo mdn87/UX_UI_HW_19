@@ -67,11 +67,9 @@ body {
 }
 #heroSection {
   grid-area: heroSection;
-  /*
-  background-image: url("/img/heroimg.png");
+  /*  background-image: url("/img/heroimg.png");
   object-fit: fill;
-  background-repeat: no-repeat; 
-  */
+  background-repeat: no-repeat; */
 }
 #aboutMe {
   grid-area: aboutMe;
@@ -112,6 +110,41 @@ body {
   height: 150px;
   justify-self: flex-end;
 }
+
+/* Hero Animation */
+.anim {
+  position: absolute;
+  z-index: -1;
+}
+#heroImg {
+  z-index: 1;
+}
+#cloud1 {
+  top: 250px;
+}
+#cloud2 {
+  top: 290px;
+  left: 440px;
+}
+#star1 {
+  top: 250px;
+  right: 150px;
+}
+#star2 {
+  top: 220px;
+  right: 70px;
+}
+#planet1 {
+  right: 300px;
+  top: 140px;
+  z-index: -2;
+}
+#orbit {
+  right: 502px;
+  top: 268px;
+  z-index: -2;
+}
+
 
 /* Sidebar */
 .leftNav {
