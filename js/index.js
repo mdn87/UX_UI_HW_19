@@ -1,11 +1,19 @@
+// Hover projects in navigation
 $(document).ready(function() {   
-  $('#proj1').hover(function(){
-        console.log("Mouse Enter");
-        $(this).addClass('highlight');
-      }, function() {
-        console.log("Mouse Enter");
-        $(this).removeClass('highlight');
+  $('.nav').hover(function(){
+    if($(this).hasClass('active')){
+      //do nothing
+    } else {
+      $(this).addClass('highlight');
+      console.log('hover');
+    }
+  }, function() {
+    if(!$(this).hasClass('active')){
+      $(this).removeClass('highlight');
+    }
   });
+
+
 });
 $("#proj2").click(function(){
     $(this).animate({

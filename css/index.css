@@ -51,18 +51,21 @@ body {
 /* mainContent flexbox */
 #mainContent {
   margin: 0px 1%;
+  padding-left: 200px;
+  padding-right: 200px;
   display: grid;
   grid-template-rows: 520px 150px 200px 200px;
-  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-template-columns: 2fr 2fr 1fr;
   grid-template-areas:
-  "sidebar heroSection heroSection heroSection"
-  "sidebar aboutMe aboutMe aboutMe"
-  "sidebar skills work work"
-  "sidebar skills work work"
+  "heroSection heroSection heroSection"
+  "aboutMe aboutMe aboutMe"
+  "skills work work"
+  "skills work work"
   ;
 }
 #sidebar {
   grid-area: sidebar;
+  display: none;
 
 }
 #heroSection {
@@ -143,6 +146,10 @@ body {
   right: 502px;
   top: 268px;
   z-index: -2;
+}
+#planet2 {
+  top: 250px;
+  left: 100px;
 }
 
 
