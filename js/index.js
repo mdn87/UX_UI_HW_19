@@ -57,18 +57,26 @@ $(document).ready(function() {
         if(currentPage == 0){
           $('#mainContent').addClass('hide');
           $('#home').removeClass('highlight');
+          $('#home').removeClass('click');
+          $('#home').removeClass('active');
         }
         if(currentPage == 1){
           $('#p1Content').addClass('hide');
           $('#proj1').removeClass('highlight');
+          $('#proj1').removeClass('click');
+          $('#proj1').removeClass('active');
         }
         if(currentPage == 2){
           $('#p2Content').addClass('hide');
           $('#proj2').removeClass('highlight');
+          $('#proj2').removeClass('click');
+          $('#proj2').removeClass('active');
         }
         if(currentPage == 3){
           $('#p3Content').addClass('hide');
           $('#proj3').removeClass('highlight');
+          $('#proj3').removeClass('click');
+          $('#proj3').removeClass('active');
         }
       }
     }
