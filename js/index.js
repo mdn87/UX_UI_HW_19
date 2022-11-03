@@ -1,26 +1,39 @@
 // Hover projects in navigation
 $(document).ready(function() {   
   $('.nav').hover(function(){
-    if($(this).hasClass('active')){
-      //do nothing
-    } else {
+    if(!$(this).hasClass('active')){
       $(this).addClass('highlight');
-      console.log('hover');
     }
   }, function() {
     if(!$(this).hasClass('active')){
       $(this).removeClass('highlight');
     }
   });
-
-
 });
-$("#proj2").click(function(){
-    $(this).animate({
-      opacity: '0.5'
-    },500
-    );
-  }); 
+
+// Animate nav and load page on click
+$(document).ready(function() {
+  $('.nav').on('click', function(){
+    var clickedPage = $(this);
+    if(!$(this).hasClass('active')){
+      $(this).addClass('click');
+      $(this).addClass('active');
+      loadPage(clickedPage);
+    }
+    function loadPage(){
+      if($(this).is('#proj1')){
+        console.log('Project 1 Clicked');
+      }
+      if($(this).parent().hasClass('#proj2')){
+        console.log('Project 2 Clicked');
+      }
+      if($(this).hasClass('#proj3')){
+        console.log('Project 3 Clicked');
+      }
+    }
+  })
+});
+
 $(document).ready(function() {   
     function animateCloud1() {
         $('#cloud1').animate({

@@ -47,6 +47,21 @@ body {
   background-color: rgba(0,174,239,0.5);
   border-radius: 50%;
 }
+.click {
+  animation-name: navClick;
+  animation-duration: 1s;
+}
+@keyframes navClick {
+  0%{
+    transform:scale(1);
+  }
+  50%{
+      transform:scale(1.1);
+  }
+  100%{
+    transform:scale(1);
+  }
+}
 
 /* mainContent flexbox */
 #mainContent {
