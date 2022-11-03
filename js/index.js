@@ -18,18 +18,21 @@ $(document).ready(function() {
     if(!$(this).hasClass('active')){
       $(this).addClass('click');
       $(this).addClass('active');
-      loadPage(clickedPage);
-    }
-    function loadPage(){
+      if($(this).is('#home')){
+        loadPage(0);
+      }
       if($(this).is('#proj1')){
-        console.log('Project 1 Clicked');
+        loadPage(1);
       }
-      if($(this).parent().hasClass('#proj2')){
-        console.log('Project 2 Clicked');
+      if($(this).is('#proj2')){
+        loadPage(2);
       }
-      if($(this).hasClass('#proj3')){
-        console.log('Project 3 Clicked');
+      if($(this).is('#proj3')){
+        loadPage(3);
       }
+    }
+    function loadPage(pageNumber){
+      console.log(pageNumber);
     }
   })
 });
@@ -37,12 +40,12 @@ $(document).ready(function() {
 $(document).ready(function() {   
     function animateCloud1() {
         $('#cloud1').animate({
-            'right':'400px'
+            'right':'-200px'
         }
-            ,16000, 'linear'
+            ,26000, 'linear'
         )
         .animate(
-            {'right':'1000px'}
+            {'right':'1600px'}
             ,1
             ,animateCloud1
         ); 
@@ -53,12 +56,12 @@ $(document).ready(function() {
 $(document).ready(function() {   
     function animateCloud2() {
         $('#cloud2').animate({
-            'right':'400px'
+            'left':'1000px'
         }
-            ,6000, 'linear'
+            ,36000, 'linear'
         )
         .animate(
-            {'right':'1000px'}
+            {'left':'100px'}
             ,1, 'linear'
             ,animateCloud2
         ); 

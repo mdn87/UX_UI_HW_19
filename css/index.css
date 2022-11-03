@@ -138,14 +138,14 @@ body {
   z-index: 1;
 }
 #cloud1 {
-  top: 250px;
+  top: 230px;
 }
 #cloud2 {
-  top: 290px;
+  top: 280px;
   left: 440px;
 }
 #star1 {
-  top: 250px;
+  top: 255px;
   right: 150px;
 }
 #star2 {
