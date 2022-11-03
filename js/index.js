@@ -82,12 +82,17 @@ $(document).ready(function() {
 
 // Sidebar scroller
 $(window).scroll(function(){
-  var scrollPos = $(document).scrollTop();
-  //console.log(scrollPos);
+  var scrollPos = $(document).scrollTop()  * ( 4 / 38 );
+  // console.log(scrollPos); // use for ratio
+  $('#mainDot').css('margin-top', scrollPos);
 });
 
-//Waypoint Library jQuery include
+// Sidebar collapse on scroll
+// Waypoint Library jQuery include
+// http://imakewebthings.com/waypoints/guides/jquery-zepto/
 $(document).ready(function() {
+  const projectArray1 = [];
+  var dotsObject = '<span class="dot"></span><span class="dot"></span>';
   var waypoint0 = new Waypoint({
     element: $('#p1s0'),
     handler: function() {
@@ -97,37 +102,91 @@ $(document).ready(function() {
   var waypoint1 = new Waypoint({
     element: $('#p1s1'),
     handler: function() {
-      console.log("Section 1");
+      if($('.dots1').hasClass('hide')){
+        $('.dots1').removeClass('hide');
+      } else {
+        $('.dots1').addClass('hide');
+      }
+      if($('.btn1').hasClass('navFocus')){
+        $('.btn1').removeClass('navFocus');
+      } else {
+        $('.btn1').addClass('navFocus');
+      }
     }
   })
   var waypoint2 = new Waypoint({
     element: $('#p1s2'),
     handler: function() {
-      console.log("Section 2");
+      if($('.dots2').hasClass('hide')){
+        $('.dots2').removeClass('hide');
+      } else {
+        $('.dots2').addClass('hide');
+      }
+      if($('.btn2').hasClass('navFocus')){
+        $('.btn2').removeClass('navFocus');
+      } else {
+        $('.btn2').addClass('navFocus');
+      }
     }
   })
   var waypoint3 = new Waypoint({
     element: $('#p1s3'),
     handler: function() {
-      console.log("Section 3");
+      if($('.dots3').hasClass('hide')){
+        $('.dots3').removeClass('hide');
+      } else {
+        $('.dots3').addClass('hide');
+      }
+      if($('.btn3').hasClass('navFocus')){
+        $('.btn3').removeClass('navFocus');
+      } else {
+        $('.btn3').addClass('navFocus');
+      }
     }
   })
   var waypoint4 = new Waypoint({
     element: $('#p1s4'),
     handler: function() {
-      console.log("Section 4");
+      if($('.dots4').hasClass('hide')){
+        $('.dots4').removeClass('hide');
+      } else {
+        $('.dots4').addClass('hide');
+      }
+      if($('.btn4').hasClass('navFocus')){
+        $('.btn4').removeClass('navFocus');
+      } else {
+        $('.btn4').addClass('navFocus');
+      }
     }
   })
   var waypoint5 = new Waypoint({
     element: $('#p1s5'),
     handler: function() {
-      console.log("Section 5");
+      if($('.dots5').hasClass('hide')){
+        $('.dots5').removeClass('hide');
+      } else {
+        $('.dots5').addClass('hide');
+      }
+      if($('.btn5').hasClass('navFocus')){
+        $('.btn5').removeClass('navFocus');
+      } else {
+        $('.btn5').addClass('navFocus');
+      }
     }
   })
   var waypoint6 = new Waypoint({
     element: $('#p1s6'),
     handler: function() {
-      console.log("Section 6");
+      if($('.dots6').hasClass('hide')){
+        $('.dots6').removeClass('hide');
+      } else {
+        $('.dots6').addClass('hide');
+      }
+      if($('.btn6').hasClass('navFocus')){
+        $('.btn6').removeClass('navFocus');
+      } else {
+        $('.btn6').addClass('navFocus');
+      }
     }
   })
 });
@@ -181,8 +240,6 @@ $(document).ready(function() {
   });
 });
 
-//https://wowjs.uk/ Reveal animations on scroll
-
 // Hero animation
 $(document).ready(function() {   
     function animateCloud1() {
@@ -197,7 +254,6 @@ $(document).ready(function() {
             ,animateCloud1
         ); 
     }
-
     animateCloud1();
 }); 
 $(document).ready(function() {   
@@ -213,7 +269,6 @@ $(document).ready(function() {
             ,animateCloud2
         ); 
     }
-
     animateCloud2();
 }); 
 

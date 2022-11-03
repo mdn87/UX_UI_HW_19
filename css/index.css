@@ -221,15 +221,23 @@ h4 {
   top: 225px;
   padding-left: 1%;
   padding-right: 1%;
+  padding-top: 15px;
   background-color: white;
   z-index: 0;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
   border: 3px solid orange;
   height: 60vh;
+  max-width: 142px;
+  gap: 10px;
 }
+.navFocus {
+  font-size: 15pt;
+  text-shadow: 1px 1px 1px rgba(0,174,239,0.25);
+}
+
 
 .dot {
   height: 8px;
@@ -239,6 +247,13 @@ h4 {
   border: 5px solid rgba(0,174,239,1);
   border-width: 3px; 
   display: inline-block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.dots {
+  display: flex; 
+  flex-flow: column nowrap;
+  justify-content: space-between;
 }
 .dotScroll {
   height: 12px;
@@ -251,7 +266,7 @@ h4 {
 }
 .sidebar {
   border: 10px solid lightseagreen;
-    
+
 }
 .scrollBar {
   position: fixed;
@@ -264,11 +279,14 @@ h4 {
   align-items: center;
   justify-content: space-between;
   border: 3px solid greenyellow;
-  z-index: 1;
 }
-.scrollDot {
-  text-align: right;
+#mainDot {
+  position: fixed; 
+  z-index: 111;
+  left: 210px;
+  top: 285px;
 }
+
 .scrollLine {
   background-color: aqua;
   width: 5px;
