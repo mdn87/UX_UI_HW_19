@@ -49,7 +49,7 @@ body {
 }
 .click {
   animation-name: navClick;
-  animation-duration: 1s;
+  animation-duration: 0.65s;
 }
 @keyframes navClick {
   0%{
@@ -77,11 +77,6 @@ body {
   "skills work work"
   "skills work work"
   ;
-}
-#sidebar {
-  grid-area: sidebar;
-  display: none;
-
 }
 #heroSection {
   grid-area: heroSection;
@@ -129,6 +124,124 @@ body {
   justify-self: flex-end;
 }
 
+/* Project Page Content */
+.show {}
+.hide {
+  display: none !important;
+}
+h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 84pt;
+  line-height: 50px;
+  margin-top: 3px;
+  font-weight: 700;
+  color: rgba(0,174,239,1);
+  text-transform: uppercase;
+}
+.pContent {
+  width: 100%;
+  display: grid;
+  flex-direction: column;
+  grid-template-rows: 500px 500px 500px 500px 500px 500px 500px 500px;
+  grid-template-columns: 15% 23% 23% 23% 15%;
+  grid-template-areas:
+  "sidebar pOverview pOverview pOverview ."
+  "sidebar pSection1 pSection1 pSection1 ."
+  "sidebar pSection2 pSection2 pSection2 ."
+  "sidebar pSection3 pSection3 pSection3 ."
+  "sidebar pSection4 pSection4 pSection4 ."
+  "sidebar pSection5 pSection5 pSection5 ."
+  "sidebar pSection6 pSection6 pSection6 ."
+  ;
+}
+#sidebar { grid-area: sidebar;  }
+.pOverview {
+  grid-area: pOverview;
+}
+.section {
+  border: 5px solid red;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+.pTitle {
+  border: 15px solid pink;
+  height: 100px;
+}
+.pSection {
+  display: flex;
+  height: 400px;
+}
+.pDesc {
+  width: 50%;
+  border: 5px solid orange;
+}
+.pImg {
+  width: 50%;
+  border: 5px solid purple;
+}
+.pRight {
+  align-items: flex-end;
+}
+.pLeft {
+  align-items: flex-start;
+}
+.pCenter {
+  align-items: center;
+}
+.pSection1 {
+  grid-area: pSection1;
+}
+.pSection2 {
+  grid-area: pSection2;
+}
+.pSection3 {
+  grid-area: pSection3;
+}
+.pSection4 {
+  grid-area: pSection4;
+}
+.pSection5 {
+  grid-area: pSection5;
+}
+.pSection6 {
+  grid-area: pSection6;
+}
+
+/* Sidebar */
+.leftNav {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14pt;
+  font-weight: 700;
+  color: rgba(0,174,239,1);
+  text-transform: uppercase;
+  text-align: center;
+  position: fixed;
+  top: 245px;
+  padding-left: 1%;
+  padding-right: 1%;
+  background-color: white;
+  z-index: -1;
+}
+.leftNavList {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+.leftNavList li {
+  padding: 10px;
+}
+.dot {
+  height: 8px;
+  width: 8px;
+  background-color: white;
+  border-radius: 50%;
+  border: 5px solid rgba(0,174,239,1);
+  border-width: 3px; 
+  display: inline-block;
+}
+
 /* Hero Animation */
 .anim {
   position: absolute;
@@ -168,38 +281,7 @@ body {
 }
 
 
-/* Sidebar */
-.leftNav {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14pt;
-  font-weight: 700;
-  color: rgba(0,174,239,1);
-  text-transform: uppercase;
-  text-align: center;
-  position: fixed;
-  top: 245px;
-  width: 15%;
-  left: 1%;
-  background-color: white;
-  z-index: -1;
-}
-.leftNavList {
-  list-style: none;
-  padding: 0px;
-  margin: 0px;
-}
-.leftNavList li {
-  padding: 10px;
-}
-.dot {
-  height: 8px;
-  width: 8px;
-  background-color: white;
-  border-radius: 50%;
-  border: 5px solid rgba(0,174,239,1);
-  border-width: 3px; 
-  display: inline-block;
-}
+
 
 /* Content Sections */
 .textStyles {
