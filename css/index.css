@@ -154,7 +154,7 @@ h4 {
   "sidebar pSection6 pSection6 pSection6 ."
   ;
 }
-#sidebar { grid-area: sidebar;  }
+.sidebar { grid-area: sidebar;  }
 .pOverview {
   grid-area: pOverview;
 }
@@ -218,20 +218,19 @@ h4 {
   text-transform: uppercase;
   text-align: center;
   position: fixed;
-  top: 245px;
+  top: 225px;
   padding-left: 1%;
   padding-right: 1%;
   background-color: white;
-  z-index: -1;
+  z-index: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+  border: 3px solid orange;
+  height: 60vh;
 }
-.leftNavList {
-  list-style: none;
-  padding: 0px;
-  margin: 0px;
-}
-.leftNavList li {
-  padding: 10px;
-}
+
 .dot {
   height: 8px;
   width: 8px;
@@ -240,6 +239,40 @@ h4 {
   border: 5px solid rgba(0,174,239,1);
   border-width: 3px; 
   display: inline-block;
+}
+.dotScroll {
+  height: 12px;
+  width: 12px;
+  background-color: white;
+  border-radius: 50%;
+  border: 6px solid rgba(0,174,239,1);
+  border-width: 5px; 
+  display: inline-block;
+}
+.sidebar {
+  border: 10px solid lightseagreen;
+    
+}
+.scrollBar {
+  position: fixed;
+  top: 245px;
+  height: 55vh;
+  width: 35px;
+  left: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 3px solid greenyellow;
+  z-index: 1;
+}
+.scrollDot {
+  text-align: right;
+}
+.scrollLine {
+  background-color: aqua;
+  width: 5px;
+  height: 10vh;
 }
 
 /* Hero Animation */

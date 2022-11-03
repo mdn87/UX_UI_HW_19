@@ -26,7 +26,7 @@
       </a>
     </div>
   </nav>
-  <section id="mainContent" class="">
+  <section id="mainContent" class="hide">
     <div id="heroSection" class="textStyles">
       <img id="heroImg" src="img/heroimg-blank.png">
       <img id="cloud1" class="anim" src="img/cloud-200x85.png">
@@ -134,30 +134,40 @@
     </div>
     -->
   </section>
-  <section id="p1Content" class="pContent hide">
-    <div id="sidebar">
+  <section id="p1Content" class="pContent">
+    <div class="sidebar">
+      <div class="scrollBar">
+        <div class="scrollArrowUp"><img src="img/arrow-up.png"></div>
+        <div class="scrollDot"><span class="dotScroll"></span></div>
+        <div class="scrollArrowDown"><img src="img/arrow-down.png"></div>
+      </div>
+      
+      <div class="scrollLine"></div>
+      
       <div class="leftNav">
-          <ul class="leftNavList">
-              <li><span class="dot"></span></li>
-              <li>About Me</li>
-              <li><span class="dot"></span></li>
-              <li><span class="dot"></span></li>
-              <li><span class="dot"></span></li>
-              <li>My Skills</li>
-              <li><span class="dot"></span></li>
-              <li><span class="dot"></span></li>
-              <li><span class="dot"></span></li>
-              <li>My Work</li>
-              <li><span class="dot"></span></li>
-              <li><span class="dot"></span></li>
-              <li><span class="dot"></span></li>
-              <li>Contact</li>
-              <li><span class="dot"></span></li>
-          </ul>
+        <div class="btn0">Overview</div>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <div class="btn1">Research</div>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <div class="btn2">Definition</div>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <div class="btn3">Ideation</div>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <div class="btn4">Prototyping</div>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <div class="btn5">Testing</div>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <div class="btn6">Conclusion</div>
       </div>
     </div>
     <div class="pOverview section pCenter textStyles">
-      <div class="pTitle">
+      <div id="p1s0" class="pTitle">
         <h4>GroupUp</h4>
       </div>
       <div class="pSection">
@@ -170,7 +180,7 @@
         </div>
       </div>
     </div>
-    <div class="pSection1 section pLeft textStyles">
+    <div id="p1s1" class="pSection1 section pLeft textStyles">
       <div class="pTitle">
         <h4>Research</h4>
       </div>
@@ -184,7 +194,7 @@
         </div>
       </div>
     </div>
-    <div class="pSection2 section pRight textStyles">
+    <div id="p1s2" class="pSection2 section pRight textStyles">
       <div class="pTitle">
         <h4>Definition</h4>
       </div>
@@ -198,7 +208,7 @@
         </div>
       </div>
     </div>
-    <div class="pSection3 section pLeft textStyles">
+    <div id="p1s3" class="pSection3 section pLeft textStyles">
       <div class="pTitle">
         <h4>Ideation</h4>
       </div>
@@ -212,7 +222,7 @@
         </div>
       </div>
     </div>
-    <div class="pSection4 section pRight textStyles">
+    <div id="p1s4" class="pSection4 section pRight textStyles">
       <div class="pTitle">
         <h4>Prototyping</h4>
       </div>
@@ -226,7 +236,7 @@
         </div>
       </div>
     </div>
-    <div class="pSection5 section pLeft textStyles">
+    <div id="p1s5" class="pSection5 section pLeft textStyles">
       <div class="pTitle">
         <h4>Testing</h4>
       </div>
@@ -240,7 +250,7 @@
         </div>
       </div>
     </div>
-    <div class="pSection6 section pCenter textStyles">
+    <div id="p1s6" class="pSection6 section pCenter textStyles">
       <div class="pTitle">
         <h4>Conclusion</h4>
       </div>
@@ -503,6 +513,7 @@
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="js/index.js"></script>
+  <script src="js/jquery.waypoints.js"></script>
 
 </body>
 </html>

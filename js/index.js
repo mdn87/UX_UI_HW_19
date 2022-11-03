@@ -1,5 +1,5 @@
-$(document).ready(function() {
 // Hover projects in navigation
+$(document).ready(function() {
   $('.nav').hover(function(){
     if(!$(this).hasClass('active')){
       $(this).addClass('highlight');
@@ -10,7 +10,7 @@ $(document).ready(function() {
     }
   });
 
-// Animate nav and load page on click
+// Animate nav and load project page on click
   var currentPage = 0;
   $('.nav').on('click', function(){
     var clickedPage = $(this);
@@ -31,9 +31,6 @@ $(document).ready(function() {
       }
     }
     function loadPage(pageNumber){
-      console.log(pageNumber);
-      console.log(currentPage);
-
       if(pageNumber == currentPage){
         //do nothing
       } else if(pageNumber == 0){
@@ -83,6 +80,110 @@ $(document).ready(function() {
   })
 });
 
+// Sidebar scroller
+$(window).scroll(function(){
+  var scrollPos = $(document).scrollTop();
+  //console.log(scrollPos);
+});
+
+//Waypoint Library jQuery include
+$(document).ready(function() {
+  var waypoint0 = new Waypoint({
+    element: $('#p1s0'),
+    handler: function() {
+      console.log("Section 0");
+    }
+  })
+  var waypoint1 = new Waypoint({
+    element: $('#p1s1'),
+    handler: function() {
+      console.log("Section 1");
+    }
+  })
+  var waypoint2 = new Waypoint({
+    element: $('#p1s2'),
+    handler: function() {
+      console.log("Section 2");
+    }
+  })
+  var waypoint3 = new Waypoint({
+    element: $('#p1s3'),
+    handler: function() {
+      console.log("Section 3");
+    }
+  })
+  var waypoint4 = new Waypoint({
+    element: $('#p1s4'),
+    handler: function() {
+      console.log("Section 4");
+    }
+  })
+  var waypoint5 = new Waypoint({
+    element: $('#p1s5'),
+    handler: function() {
+      console.log("Section 5");
+    }
+  })
+  var waypoint6 = new Waypoint({
+    element: $('#p1s6'),
+    handler: function() {
+      console.log("Section 6");
+    }
+  })
+});
+
+
+// Sidebar buttons
+$(document).ready(function() {
+  $(".btn0").click(function() {
+    $("html").animate({
+        scrollTop: $("#p1s0").offset().top -220
+      }, 800 //speed
+    );
+  });
+  $(".btn1").click(function() {
+    $("html").animate({
+        scrollTop: $("#p1s1").offset().top -220
+      }, 800 //speed
+    );
+  });
+  $(".btn2").click(function() {
+    $("html").animate({
+        scrollTop: $("#p1s2").offset().top -220
+      }, 800 //speed
+    );
+  });
+  $(".btn3").click(function() {
+    $("html").animate({
+        scrollTop: $("#p1s3").offset().top -220
+      }, 800 //speed
+    );
+  });
+  $(".btn4").click(function() {
+    $("html").animate({
+        scrollTop: $("#p1s4").offset().top -220
+      }, 800 //speed
+    );
+  });
+  $(".btn5").click(function() {
+    console.log("Click to Section 2");
+    $("html").animate({
+        scrollTop: $("#p1s5").offset().top -220
+      }, 800 //speed
+    );
+  });
+  $(".btn6").click(function() {
+    console.log("Click to Section 2");
+    $("html").animate({
+        scrollTop: $("#p1s6").offset().top -220
+      }, 800 //speed
+    );
+  });
+});
+
+//https://wowjs.uk/ Reveal animations on scroll
+
+// Hero animation
 $(document).ready(function() {   
     function animateCloud1() {
         $('#cloud1').animate({
