@@ -1,5 +1,5 @@
+$(document).ready(function() {
 // Hover projects in navigation
-$(document).ready(function() {   
   $('.nav').hover(function(){
     if(!$(this).hasClass('active')){
       $(this).addClass('highlight');
@@ -9,10 +9,9 @@ $(document).ready(function() {
       $(this).removeClass('highlight');
     }
   });
-});
 
 // Animate nav and load page on click
-$(document).ready(function() {
+  var currentPage = 0;
   $('.nav').on('click', function(){
     var clickedPage = $(this);
     if(!$(this).hasClass('active')){
@@ -33,6 +32,45 @@ $(document).ready(function() {
     }
     function loadPage(pageNumber){
       console.log(pageNumber);
+      console.log(currentPage);
+
+      if(pageNumber == currentPage){
+        //do nothing
+      } else if(pageNumber == 0){
+        clearPage();
+        currentPage = 0;
+        $('#mainContent').removeClass('hide');
+      } else if(pageNumber == 1){
+        clearPage();
+        currentPage = 1;
+        $('#p1Content').removeClass('hide');
+      } else if(pageNumber == 2){
+        clearPage();
+        currentPage = 2;
+        $('#p2Content').removeClass('hide');
+      } else if(pageNumber == 3){
+        clearPage();
+        currentPage = 3;
+        $('#p3Content').removeClass('hide');
+      }
+      function clearPage(){
+        if(currentPage == 0){
+          $('#mainContent').addClass('hide');
+          $('#home').removeClass('highlight');
+        }
+        if(currentPage == 1){
+          $('#p1Content').addClass('hide');
+          $('#proj1').removeClass('highlight');
+        }
+        if(currentPage == 2){
+          $('#p2Content').addClass('hide');
+          $('#proj2').removeClass('highlight');
+        }
+        if(currentPage == 3){
+          $('#p3Content').addClass('hide');
+          $('#proj3').removeClass('highlight');
+        }
+      }
     }
   })
 });
