@@ -81,22 +81,37 @@ $(document).ready(function() {
 });
 
 // Sidebar scroller
-$(window).scroll(function(){
-  var scrollPos = $(document).scrollTop()  * ( 4 / 38 );
-  // console.log(scrollPos); // use for ratio
-  $('#mainDot').css('margin-top', scrollPos);
+$(document).ready(function() {
+  $('#mainDot').css('margin-top', 0);
+  $(window).scroll(function(){
+    var scrollPos = $(document).scrollTop()  * ( 4 / 38 );
+    // console.log(scrollPos); // use for ratio
+    $('#mainDot').css('margin-top', scrollPos);
+  });
+});
+
+
+// Draggable jQuery-UI include
+$(document).ready(function() {
+  $(function() { 
+    $('#mainDot').draggable({axis:'y'}); 
+  });
+  $("#mainDot").on("drag", function() {
+    var thisChanges = $('#mainDot').top;
+    console.log(thisChanges);
+  } );
 });
 
 // Sidebar collapse on scroll
 // Waypoint Library jQuery include
 // http://imakewebthings.com/waypoints/guides/jquery-zepto/
 $(document).ready(function() {
-  const projectArray1 = [];
-  var dotsObject = '<span class="dot"></span><span class="dot"></span>';
+  //const projectArray1 = [];
+  //var dotsObject = '<span class="dot"></span><span class="dot"></span>';
   var waypoint0 = new Waypoint({
     element: $('#p1s0'),
     handler: function() {
-      console.log("Section 0");
+      //console.log("Section 0");
     }
   })
   var waypoint1 = new Waypoint({
