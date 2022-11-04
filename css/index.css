@@ -412,12 +412,18 @@ h4 {
   }
 }
 @media only screen and (max-width: 900px) {
+  .anim {
+    display: none;
+  }
   #navigation img {
     width: 120px;
     height: 120px;
   }
 }
 @media only screen and (max-width: 600px) {
+  .anim {
+    display: none;
+  }
   #navBar {
     height: 100px;
     padding-left: 5%;
