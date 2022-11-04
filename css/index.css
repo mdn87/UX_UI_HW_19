@@ -280,12 +280,20 @@ h4 {
   justify-content: space-between;
   border: 3px solid greenyellow;
 }
-#mainDot {
+#dotContain {
+  border: 3px solid brown;
   position: fixed; 
-  z-index: 111;
+  width: 22px;
+  height: 44vh;
   left: 200px;
   top: 285px;
+}
+#mainDot {
+
+  z-index: 111;
+
   margin-top: 0px;
+  
 }
 
 .scrollLine {

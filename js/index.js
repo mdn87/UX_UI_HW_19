@@ -82,11 +82,12 @@ $(document).ready(function() {
 
 // Sidebar scroller
 $(document).ready(function() {
-  $('#mainDot').css('margin-top', 0);
-  $(window).scroll(function(){
-    var scrollPos = $(document).scrollTop()  * ( 4 / 38 );
-    // console.log(scrollPos); // use for ratio
-    $('#mainDot').css('margin-top', scrollPos);
+  
+  //$('#mainDot').css('margin-top', 0);
+  $(window).scroll(function(event){
+    var scrollPos = $(document).scrollTop();
+    console.log(scrollPos); // use for ratio
+    //$(window).scrollTop(scrollPos);
   });
 });
 
@@ -94,11 +95,15 @@ $(document).ready(function() {
 // Draggable jQuery-UI include
 $(document).ready(function() {
   $(function() { 
-    $('#mainDot').draggable({axis:'y'}); 
+    $('#mainDot').draggable({
+      containment: '#dotContain',
+    }); //axis:'y'
   });
-  $("#mainDot").on("drag", function() {
-    var thisChanges = $('#mainDot').top;
-    console.log(thisChanges);
+  $("#mainDot").on("drag", function(event, ui) {
+    var thisChanges = Math.max(400, ui.position.top);
+    $(window).scrollTop(thisChanges)
+    //console.log(ui);
+    //console.log(thisChanges);
   } );
 });
 
