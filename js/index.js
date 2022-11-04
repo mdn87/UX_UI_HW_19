@@ -85,9 +85,9 @@ $(document).ready(function() {
   
   //$('#mainDot').css('margin-top', 0);
   $(window).scroll(function(event){
-    var scrollPos = $(document).scrollTop();
+    var scrollPos = $(window).scrollTop();
     console.log(scrollPos); // use for ratio
-    //$(window).scrollTop(scrollPos);
+    $('#mainDot').position.top = scrollPos;
   });
 });
 
@@ -100,10 +100,10 @@ $(document).ready(function() {
     }); //axis:'y'
   });
   $("#mainDot").on("drag", function(event, ui) {
-    var thisChanges = Math.max(400, ui.position.top);
+    //var thisChanges = Math.max(1900, ui.position.top);
+    var thisChanges = (ui.position.top * 7);
     $(window).scrollTop(thisChanges)
     //console.log(ui);
-    //console.log(thisChanges);
   } );
 });
 
@@ -112,11 +112,11 @@ $(document).ready(function() {
 // http://imakewebthings.com/waypoints/guides/jquery-zepto/
 $(document).ready(function() {
   //const projectArray1 = [];
-  //var dotsObject = '<span class="dot"></span><span class="dot"></span>';
+  //var dotsObject = '<span class="dot"></span>';
   var waypoint0 = new Waypoint({
     element: $('#p1s0'),
     handler: function() {
-      //console.log("Section 0");
+      //console.log("Top of the page!");
     }
   })
   var waypoint1 = new Waypoint({
@@ -133,6 +133,7 @@ $(document).ready(function() {
         $('.btn1').addClass('navFocus');
       }
     }
+  }, {  offset: '25%'
   })
   var waypoint2 = new Waypoint({
     element: $('#p1s2'),
