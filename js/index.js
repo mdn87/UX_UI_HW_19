@@ -82,25 +82,23 @@ $(document).ready(function() {
 
 // Sidebar scroller
 $(document).ready(function() {
-  
-  //$('#mainDot').css('margin-top', 0);
   $(window).scroll(function(event){
     var scrollPos = $(window).scrollTop();
-    console.log(scrollPos); // use for ratio
+    //console.log(scrollPos);
     $('#mainDot').position.top = scrollPos;
+    console.log($('#mainDot').position.top);
   });
 });
 
 
-// Draggable jQuery-UI include
+// Draggable jQuery-UI
 $(document).ready(function() {
   $(function() { 
     $('#mainDot').draggable({
       containment: '#dotContain',
-    }); //axis:'y'
+    });
   });
   $("#mainDot").on("drag", function(event, ui) {
-    //var thisChanges = Math.max(1900, ui.position.top);
     var thisChanges = (ui.position.top * 7);
     $(window).scrollTop(thisChanges)
     //console.log(ui);
@@ -108,7 +106,7 @@ $(document).ready(function() {
 });
 
 // Sidebar collapse on scroll
-// Waypoint Library jQuery include
+// Waypoint Library jQuery
 // http://imakewebthings.com/waypoints/guides/jquery-zepto/
 $(document).ready(function() {
   //const projectArray1 = [];
@@ -116,7 +114,7 @@ $(document).ready(function() {
   var waypoint0 = new Waypoint({
     element: $('#p1s0'),
     handler: function() {
-      //console.log("Top of the page!");
+      // Do nothing
     }
   })
   var waypoint1 = new Waypoint({
@@ -132,8 +130,7 @@ $(document).ready(function() {
       } else {
         $('.btn1').addClass('navFocus');
       }
-    }
-  }, {  offset: '25%'
+    }, offset: 'bottom-in-view'
   })
   var waypoint2 = new Waypoint({
     element: $('#p1s2'),
@@ -148,7 +145,7 @@ $(document).ready(function() {
       } else {
         $('.btn2').addClass('navFocus');
       }
-    }
+    }, offset: 'bottom-in-view'
   })
   var waypoint3 = new Waypoint({
     element: $('#p1s3'),
@@ -163,7 +160,7 @@ $(document).ready(function() {
       } else {
         $('.btn3').addClass('navFocus');
       }
-    }
+    }, offset: 'bottom-in-view'
   })
   var waypoint4 = new Waypoint({
     element: $('#p1s4'),
@@ -178,7 +175,7 @@ $(document).ready(function() {
       } else {
         $('.btn4').addClass('navFocus');
       }
-    }
+    }, offset: 'bottom-in-view'
   })
   var waypoint5 = new Waypoint({
     element: $('#p1s5'),
@@ -193,7 +190,7 @@ $(document).ready(function() {
       } else {
         $('.btn5').addClass('navFocus');
       }
-    }
+    }, offset: 'bottom-in-view'
   })
   var waypoint6 = new Waypoint({
     element: $('#p1s6'),
@@ -208,7 +205,7 @@ $(document).ready(function() {
       } else {
         $('.btn6').addClass('navFocus');
       }
-    }
+    }, offset: 'bottom-in-view'
   })
 });
 
