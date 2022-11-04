@@ -228,7 +228,6 @@ h4 {
   flex-flow: column nowrap;
   align-items: center;
   justify-content: flex-start;
-  border: 3px solid orange;
   height: 60vh;
   max-width: 142px;
   gap: 10px;
@@ -265,7 +264,6 @@ h4 {
   display: inline-block;
 }
 .sidebar {
-  border: 10px solid lightseagreen;
 
 }
 .scrollBar {
@@ -278,28 +276,27 @@ h4 {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  border: 3px solid greenyellow;
 }
 #dotContain {
-  border: 3px solid brown;
   position: fixed; 
   width: 22px;
-  height: 47vh;
-  left: 200px;
-  top: 285px;
+  height: 48vh;
+  left: 197px;
+  top: 278px;
 }
 #mainDot {
-
   z-index: 111;
-
   margin-top: 0px;
-  
 }
 
 .scrollLine {
-  background-color: aqua;
+  position: fixed;
+  background-color: rgba(0,174,239,1);
   width: 5px;
-  height: 10vh;
+  margin-top: 60px;
+  margin-left: 197px;
+  height: 47vh;
+  z-index: -1;
 }
 
 /* Hero Animation */
