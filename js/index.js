@@ -85,8 +85,8 @@ $(document).ready(function() {
   $(window).scroll(function(event){
     var scrollPos = $(window).scrollTop();
     //console.log(scrollPos);
-    $('#mainDot').position.top = scrollPos;
-    console.log($('#mainDot').position.top);
+    $('#mainDot').css('top', scrollPos);
+    console.log($('#mainDot').top);
   });
 });
 
