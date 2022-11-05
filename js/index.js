@@ -83,10 +83,15 @@ $(document).ready(function() {
 // Sidebar scroller
 $(document).ready(function() {
   $(window).scroll(function(event){
-    var scrollPos = $(window).scrollTop();
-    //console.log(scrollPos);
-    $('#mainDot').css('top', scrollPos);
-    console.log($('#mainDot').top);
+    console.log($(window).scrollTop()); //use for ratio
+    var scrollPos = ($(window).scrollTop() / 9);
+    if(scrollPos < 400){
+      $('#mainDot').css('top', scrollPos);
+    } else {
+      $('#mainDot').css('top', 410);
+    }
+    
+    //console.log($('#mainDot').top);
   });
 });
 
@@ -99,7 +104,7 @@ $(document).ready(function() {
     });
   });
   $("#mainDot").on("drag", function(event, ui) {
-    var thisChanges = (ui.position.top * 7);
+    var thisChanges = (ui.position.top * 9);
     $(window).scrollTop(thisChanges)
     //console.log(ui);
   } );

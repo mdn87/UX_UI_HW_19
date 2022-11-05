@@ -17,6 +17,7 @@ body {
   position: sticky;
   top: 0px;
   background-color: white;
+  z-index: 111;
 }
 #navigation {
   display: flex;
@@ -159,15 +160,29 @@ h4 {
   grid-area: pOverview;
 }
 .section {
-  border: 5px solid red;
+  border: 2px solid red;
   width: 100%;
   display: flex;
   flex-direction: column;
   margin-top: 25px;
 }
 .pTitle {
-  border: 15px solid pink;
-  height: 100px;
+  border: 1px dotted blue;
+  height: 150px;
+  position: relative;
+}
+.pTitleImg {
+  position: absolute;
+  top: 0px;
+  left: -300px;
+  height: 150px;
+}
+.pTitleImg2 {
+  position: absolute;
+  right: 15%;
+  max-width: 500px;
+  max-height: 250px;
+  float: right;
 }
 .pSection {
   display: flex;
@@ -175,11 +190,11 @@ h4 {
 }
 .pDesc {
   width: 50%;
-  border: 5px solid orange;
+  border: 1px solid orange;
 }
 .pImg {
   width: 50%;
-  border: 5px solid purple;
+  border: 1px solid purple;
 }
 .pRight {
   align-items: flex-end;
@@ -398,9 +413,6 @@ h4 {
     "skills work work"
     ;
   }
-  #sidebar {
-    display: none;
-  }
   #heroSection {
     overflow: hidden;
     height: 500px;
@@ -460,7 +472,7 @@ h4 {
     width: 800px;
     margin-left: -30px;
   }
-  #sidebar {
+  .sidebar {
     display: none;
   }
   .project {
