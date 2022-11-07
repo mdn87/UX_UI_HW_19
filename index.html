@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href="css/index.css" type="text/css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +28,7 @@
     </div>
   </nav>
   <!--Start Home Page Content-->
-  <section id="mainContent" class="">
+  <section id="mainContent" class="hide">
     <div id="heroSection" class="textStyles">
       <img id="heroImg" src="img/heroimg-blank.png">
       <img id="cloud1" class="anim" src="img/cloud-200x85.png">
@@ -135,7 +136,7 @@
     </div>
     -->
   </section><!-- End Home Page Content -->
-  <section id="p1Content" class="pContent hide">
+  <section id="p1Content" class="pContent">
     <div class="sidebar">
       
       <div class="scrollBar">
@@ -186,7 +187,7 @@
       </div>
       <div class="pSection">
         <div class="pDesc">
-          <h2>My First UX Project</h2>
+          <h2>Travel App</h2>
           <p>Objective: Create an app to solve a problem a user might encounter when traveling with a group of people.</p>
         </div>
         <div class="pImg">
@@ -197,6 +198,7 @@
     <div id="p1s1" class="pSection1 section pLeft textStyles">
       <div class="pTitle">
         <h4>Research</h4>
+       
       </div>
       <div class="pSection">
         <div class="pDesc">
@@ -204,7 +206,26 @@
           <p>Research copy...</p>
         </div>
         <div class="pImg">
-          <p><img src="img/proj1.png" class="nav"></p>
+           <!--Bootstrap Carousel-->
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel"  style="max-width: 1100px !important;">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <img src="img/ResearchSlides__Page_1.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/ResearchSlides__Page_2.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/ResearchSlides__Page_3.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/ResearchSlides__Page_4.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/ResearchSlides__Page_5.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -529,6 +550,6 @@
   <script src="js/index.js"></script>
   <script src="js/jquery.waypoints.js"></script>
   <script src="js/jquery-ui.min.js"></script>
-
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
