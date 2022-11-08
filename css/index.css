@@ -143,7 +143,7 @@ h4 {
   width: 100%;
   display: grid;
   flex-direction: column;
-  grid-template-rows: 550px 550px 500px 500px 500px 500px 500px 500px;
+  grid-template-rows: 550px 550px 550px 550px 500px 500px 500px 500px;
   grid-template-columns: 235px 23% 23% 23% 15%;
   grid-template-areas:
   "sidebar pOverview pOverview pOverview ."
@@ -154,6 +154,7 @@ h4 {
   "sidebar pSection5 pSection5 pSection5 ."
   "sidebar pSection6 pSection6 pSection6 ."
   ;
+  row-gap: 100px;
 }
 .sidebar { grid-area: sidebar;  }
 .pOverview {
@@ -180,7 +181,6 @@ h4 {
 }
 .pTitleImg2 {
   position: absolute;
-  right: 15%;
   max-width: 500px;
   max-height: 350px;
   float: right;
@@ -189,19 +189,52 @@ h4 {
   display: flex;
   height: 400px;
 }
+.pSection blockquote {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 28px;
+  color: rgba(109,109,109,1);
+  padding-left: 25px;
+  padding-right: 25px;
+}
 .pDesc {
   width: 50%;
   border: 1px solid orange;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .pImg {
   width: 50%;
-  border: 1px dotted purple;
+  border: 2px dotted purple;
+  max-height: 375px !important;
+}
+.pSlider {
+  width: 50%;
+  border: 7px solid rgba(0,174,239,1);
+  max-height: 375px !important;
+}
+.w-100 {
+  max-height: 375px !important;
+}
+.staticImg {
+  max-height: 375px !important;
+}
+.imgRight {
+  float: right;
+}
+.imgLeft {
+  float: left;
+  margin-left: 25px;
 }
 .pRight {
   align-items: flex-end;
 }
 .pLeft {
   align-items: flex-start;
+  margin-left: 1px;
+  margin-right: 1px;
+  display: block;
+  height: 100%;
 }
 .pCenter {
   align-items: center;
