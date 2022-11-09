@@ -161,14 +161,14 @@ h4 {
   grid-area: pOverview;
 }
 .section {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   width: 100%;
   display: flex;
   flex-direction: column;
   margin-top: 25px;
 }
 .pTitle {
-  border: 1px dotted blue;
+  /* border: 1px dotted blue; */
   height: 150px;
   position: relative;
 }
@@ -199,18 +199,18 @@ h4 {
 }
 .pDesc {
   width: 50%;
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   padding-left: 15px;
   padding-right: 15px;
 }
 .pImg {
   width: 50%;
-  border: 2px dotted purple;
+  /* border: 2px dotted purple; */
   max-height: 375px !important;
 }
 .pSlider {
   width: 50%;
-  border: 7px solid rgba(0,174,239,1);
+  /* border: 7px solid rgba(0,174,239,1); */
   max-height: 375px !important;
 }
 .w-100 {
@@ -218,6 +218,7 @@ h4 {
 }
 .staticImg {
   max-height: 375px !important;
+  max-width: 400px;
 }
 .imgRight {
   float: right;
