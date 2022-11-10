@@ -176,7 +176,7 @@ h4 {
   position: absolute;
   top: 0px;
   left: -300px;
-  height: 150px;
+  max-height: 150px;
   z-index: -1;
 }
 .pTitleImg2 {
@@ -329,7 +329,7 @@ h4 {
   align-items: center;
   justify-content: space-between;
 }
-#dotContain {
+.dotContain {
   position: fixed; 
   width: 22px;
   height: 48vh;

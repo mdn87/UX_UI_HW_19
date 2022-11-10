@@ -55,7 +55,8 @@ $(document).ready(function() {
         $('#p3Content').removeClass('hide');
       }
       function clearPage(){
-        Waypoint.destroyAll(); console.log('Destroy all waypoints');
+        $(window).scrollTop(0);
+        Waypoint.destroyAll(); //console.log('Destroy all waypoints');
         if(currentPage == 0){
           $('#p0Content').addClass('hide');
           $('#home').removeClass('highlight');
@@ -91,9 +92,13 @@ $(document).ready(function() {
     //console.log($(window).scrollTop()); //use for ratio
     var scrollPos = ($(window).scrollTop() / 9);
     if(scrollPos < 400){
-      $('#mainDot').css('top', scrollPos);
+      $('#mainDot1').css('top', scrollPos);
+      $('#mainDot2').css('top', scrollPos);
+      $('#mainDot3').css('top', scrollPos);
     } else {
-      $('#mainDot').css('top', 410);
+      $('#mainDot1').css('top', 410);
+      $('#mainDot2').css('top', 410);
+      $('#mainDot3').css('top', 410);
     }
     
     //console.log($('#mainDot').top);
@@ -104,11 +109,33 @@ $(document).ready(function() {
 // Draggable jQuery-UI
 $(document).ready(function() {
   $(function() { 
-    $('#mainDot').draggable({
-      containment: '#dotContain',
+    $('#mainDot1').draggable({
+      containment: '#dotContain1',
     });
   });
-  $("#mainDot").on("drag", function(event, ui) {
+  $("#mainDot1").on("drag", function(event, ui) {
+    var thisChanges = (ui.position.top * 9);
+    $(window).scrollTop(thisChanges)
+    //console.log(ui);
+  } );
+
+  $(function() { 
+    $('#mainDot2').draggable({
+      containment: '#dotContain2',
+    });
+  });
+  $("#mainDot2").on("drag", function(event, ui) {
+    var thisChanges = (ui.position.top * 9);
+    $(window).scrollTop(thisChanges)
+    //console.log(ui);
+  } );
+
+  $(function() { 
+    $('#mainDot3').draggable({
+      containment: '#dotContain3',
+    });
+  });
+  $("#mainDot3").on("drag", function(event, ui) {
     var thisChanges = (ui.position.top * 9);
     $(window).scrollTop(thisChanges)
     //console.log(ui);
