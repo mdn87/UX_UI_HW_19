@@ -36,23 +36,28 @@ $(document).ready(function() {
       } else if(pageNumber == 0){
         clearPage();
         currentPage = 0;
-        $('#mainContent').removeClass('hide');
+        waypointPage(currentPage);
+        $('#p0Content').removeClass('hide');
       } else if(pageNumber == 1){
         clearPage();
         currentPage = 1;
+        waypointPage(currentPage);
         $('#p1Content').removeClass('hide');
       } else if(pageNumber == 2){
         clearPage();
         currentPage = 2;
+        waypointPage(currentPage);
         $('#p2Content').removeClass('hide');
       } else if(pageNumber == 3){
         clearPage();
         currentPage = 3;
+        waypointPage(currentPage);
         $('#p3Content').removeClass('hide');
       }
       function clearPage(){
+        Waypoint.destroyAll(); console.log('Destroy all waypoints');
         if(currentPage == 0){
-          $('#mainContent').addClass('hide');
+          $('#p0Content').addClass('hide');
           $('#home').removeClass('highlight');
           $('#home').removeClass('click');
           $('#home').removeClass('active');
@@ -83,7 +88,7 @@ $(document).ready(function() {
 // Sidebar scroller
 $(document).ready(function() {
   $(window).scroll(function(event){
-    console.log($(window).scrollTop()); //use for ratio
+    //console.log($(window).scrollTop()); //use for ratio
     var scrollPos = ($(window).scrollTop() / 9);
     if(scrollPos < 400){
       $('#mainDot').css('top', scrollPos);
@@ -113,106 +118,124 @@ $(document).ready(function() {
 // Sidebar collapse on scroll
 // Waypoint Library jQuery
 // http://imakewebthings.com/waypoints/guides/jquery-zepto/
-$(document).ready(function() {
-  //const projectArray1 = [];
-  //var dotsObject = '<span class="dot"></span>';
-  var waypoint0 = new Waypoint({
-    element: $('#p1s0'),
-    handler: function() {
-      // Do nothing
-    }
-  })
-  var waypoint1 = new Waypoint({
-    element: $('#p1s1'),
-    handler: function() {
-      if($('.dots1').hasClass('hide')){
+
+function waypointPage(pageNumber) {
+  console.log('Waypoint page #: ' + pageNumber);
+  var thisSection = $('#p' + pageNumber + 'Content');
+  
+  $(document).ready(function() {
+    var waypoint0 = new Waypoint({
+      element: $('#p' + pageNumber + 's0'),
+      handler: function() {
+        // Do nothing
+        console.log('No Waypoints Yet');
         $('.dots1').removeClass('hide');
-      } else {
-        $('.dots1').addClass('hide');
-      }
-      if($('.btn1').hasClass('navFocus')){
-        $('.btn1').removeClass('navFocus');
-      } else {
-        $('.btn1').addClass('navFocus');
-      }
-    }, offset: 'bottom-in-view'
-  })
-  var waypoint2 = new Waypoint({
-    element: $('#p1s2'),
-    handler: function() {
-      if($('.dots2').hasClass('hide')){
         $('.dots2').removeClass('hide');
-      } else {
-        $('.dots2').addClass('hide');
-      }
-      if($('.btn2').hasClass('navFocus')){
-        $('.btn2').removeClass('navFocus');
-      } else {
-        $('.btn2').addClass('navFocus');
-      }
-    }, offset: 'bottom-in-view'
-  })
-  var waypoint3 = new Waypoint({
-    element: $('#p1s3'),
-    handler: function() {
-      if($('.dots3').hasClass('hide')){
         $('.dots3').removeClass('hide');
-      } else {
-        $('.dots3').addClass('hide');
-      }
-      if($('.btn3').hasClass('navFocus')){
-        $('.btn3').removeClass('navFocus');
-      } else {
-        $('.btn3').addClass('navFocus');
-      }
-    }, offset: 'bottom-in-view'
-  })
-  var waypoint4 = new Waypoint({
-    element: $('#p1s4'),
-    handler: function() {
-      if($('.dots4').hasClass('hide')){
         $('.dots4').removeClass('hide');
-      } else {
-        $('.dots4').addClass('hide');
-      }
-      if($('.btn4').hasClass('navFocus')){
-        $('.btn4').removeClass('navFocus');
-      } else {
-        $('.btn4').addClass('navFocus');
-      }
-    }, offset: 'bottom-in-view'
-  })
-  var waypoint5 = new Waypoint({
-    element: $('#p1s5'),
-    handler: function() {
-      if($('.dots5').hasClass('hide')){
         $('.dots5').removeClass('hide');
-      } else {
-        $('.dots5').addClass('hide');
-      }
-      if($('.btn5').hasClass('navFocus')){
-        $('.btn5').removeClass('navFocus');
-      } else {
-        $('.btn5').addClass('navFocus');
-      }
-    }, offset: 'bottom-in-view'
-  })
-  var waypoint6 = new Waypoint({
-    element: $('#p1s6'),
-    handler: function() {
-      if($('.dots6').hasClass('hide')){
         $('.dots6').removeClass('hide');
-      } else {
-        $('.dots6').addClass('hide');
+
       }
-      if($('.btn6').hasClass('navFocus')){
-        $('.btn6').removeClass('navFocus');
-      } else {
-        $('.btn6').addClass('navFocus');
-      }
-    }, offset: 'bottom-in-view'
+    })
+    var waypoint1 = new Waypoint({
+      element: $('#p' + pageNumber + 's1'),
+      handler: function() {
+        console.log('Waypoint 1');
+        if($('.dots1').hasClass('hide')){
+          $('.dots1').removeClass('hide');
+        } else {
+          $('.dots1').addClass('hide');
+        }
+        if($('.btn1').hasClass('navFocus')){
+          $('.btn1').removeClass('navFocus');
+        } else {
+          $('.btn1').addClass('navFocus');
+        }
+      }, offset: 'bottom-in-view'
+    })
+    var waypoint2 = new Waypoint({
+      element: $('#p' + pageNumber + 's2'),
+      handler: function() {
+        console.log('Waypoint 2');
+        if($('.dots2').hasClass('hide')){
+          $('.dots2').removeClass('hide');
+        } else {
+          $('.dots2').addClass('hide');
+        }
+        if($('.btn2').hasClass('navFocus')){
+          $('.btn2').removeClass('navFocus');
+        } else {
+          $('.btn2').addClass('navFocus');
+        }
+      }, offset: 'bottom-in-view'
+    })
+    var waypoint3 = new Waypoint({
+      element: $('#p' + pageNumber + 's3'),
+      handler: function() {
+        console.log('Waypoint 3');
+        if($('.dots3').hasClass('hide')){
+          $('.dots3').removeClass('hide');
+        } else {
+          $('.dots3').addClass('hide');
+        }
+        if($('.btn3').hasClass('navFocus')){
+          $('.btn3').removeClass('navFocus');
+        } else {
+          $('.btn3').addClass('navFocus');
+        }
+      }, offset: 'bottom-in-view'
+    })
+    var waypoint4 = new Waypoint({
+      element: $('#p' + pageNumber + 's4'),
+      handler: function() {
+        console.log('Waypoint 4');
+        if($('.dots4').hasClass('hide')){
+          $('.dots4').removeClass('hide');
+        } else {
+          $('.dots4').addClass('hide');
+        }
+        if($('.btn4').hasClass('navFocus')){
+          $('.btn4').removeClass('navFocus');
+        } else {
+          $('.btn4').addClass('navFocus');
+        }
+      }, offset: 'bottom-in-view'
+    })
+    var waypoint5 = new Waypoint({
+      element: $('#p' + pageNumber + 's5'),
+      handler: function() {
+        console.log('Waypoint 5');
+        if($('.dots5').hasClass('hide')){
+          $('.dots5').removeClass('hide');
+        } else {
+          $('.dots5').addClass('hide');
+        }
+        if($('.btn5').hasClass('navFocus')){
+          $('.btn5').removeClass('navFocus');
+        } else {
+          $('.btn5').addClass('navFocus');
+        }
+      }, offset: 'bottom-in-view'
+    })
+    var waypoint6 = new Waypoint({
+      element: $('#p' + pageNumber + 's6'),
+      handler: function() {
+        console.log('Waypoint 6');
+        if($('.dots6').hasClass('hide')){
+          $('.dots6').removeClass('hide');
+        } else {
+          $('.dots6').addClass('hide');
+        }
+        if($('.btn6').hasClass('navFocus')){
+          $('.btn6').removeClass('navFocus');
+        } else {
+          $('.btn6').addClass('navFocus');
+        }
+      }, offset: 'bottom-in-view'
+    })
   })
-});
+};
 
 
 // Sidebar buttons

@@ -28,7 +28,7 @@
     </div>
   </nav>
   <!--Start Home Page Content-->
-  <section id="mainContent" class="">
+  <section id="p0Content" class="">
     <div id="heroSection" class="textStyles">
       <img id="heroImg" src="img/heroimg-blank.png">
       <img id="cloud1" class="anim" src="img/cloud-200x85.png">
@@ -39,6 +39,13 @@
       <img id="orbit" class="anim" src="img/circle-70x70.png">
       <img id="planet2" class="anim" src="img/planet2-200x175.png">
     </div>
+    <div id="p0s0"></div>
+    <div id="p0s1"></div>
+    <div id="p0s2"></div>
+    <div id="p0s3"></div>
+    <div id="p0s4"></div>
+    <div id="p0s5"></div>
+    <div id="p0s6"></div>
     <div id="aboutMe" class="textStyles">
       <h2>About Me</h2>
       <p>I’m a visual designer with a diverse skill set ranging from motion graphics to front end web development. I’m a strong believer that if something is worth doing, it’s worth doing right. At heart, I’m a maker. I love building things from the ground up, whether it’s a woodcut or a brand identity.</p>
@@ -136,6 +143,8 @@
     </div>
     -->
   </section><!-- End Home Page Content -->
+
+  <!-- Start Project 1 Page Content -->
   <section id="p1Content" class="pContent hide">
     <div class="sidebar">
       
@@ -179,9 +188,9 @@
         </div>
         <div class="btn6">Conclusion</div>
       </div>
-    </div>
-    <div class="pOverview section pCenter textStyles">
-      <div id="p1s0" class="pTitle">
+    </div><!-- End Sidebar -->
+    <div id="p1s0" class="pSection0 pOverview section pCenter textStyles">
+      <div class="pSection0 pTitle">
         <h4> </h4>
         <img src="img/p1-over.png" class="pTitleImg staticImg">
       </div>
@@ -342,35 +351,62 @@
           <h2>Summary</h2>
           <p>Integrating user feedback during the research stage of the process allowed GroupUp to focus on what the user needed. This was possible because it helped identify which parts of the process were easily done through outside coordination and which parts the app could help with.</p>
         </div>
+        <!-- Figma Prototype iFrame -->
+        <!-- 
         <div class="pImg">
           <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="475" height="962" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F9Z1621jQpp7l1y6yebdXwF%2FClickable-Wireframe-04.2-3---IPHONE%3Fpage-id%3D0%253A1%26node-id%3D103%253A1134%26viewport%3D507%252C988%252C0.24%26scaling%3Dmin-zoom%26starting-point-node-id%3D103%253A1134" allowfullscreen></iframe>
         </div>
+        -->
       </div>
     </div>
   </section><!-- End Project 1 Content -->
+
+  <!-- Start Project 2 Content -->
   <section id="p2Content" class="pContent hide">
-    <div id="sidebar">
-      <div class="leftNav">
-          <ul class="leftNavList">
-              <li><span class="dot"></span></li>
-              <li>About Me</li>
-              <li><span class="dot"></span></li>
-              <li><span class="dot"></span></li>
-              <li><span class="dot"></span></li>
-              <li>My Skills</li>
-              <li><span class="dot"></span></li>
-              <li><span class="dot"></span></li>
-              <li><span class="dot"></span></li>
-              <li>My Work</li>
-              <li><span class="dot"></span></li>
-              <li><span class="dot"></span></li>
-              <li><span class="dot"></span></li>
-              <li>Contact</li>
-              <li><span class="dot"></span></li>
-          </ul>
+    <div class="sidebar">
+      
+      <div class="scrollBar">
+        <div class="scrollArrowUp"><img src="img/arrow-up.png"></div>
+        <div class="scrollArrowDown"><img src="img/arrow-down.png"></div>
       </div>
-    </div>
-    <div class="pOverview section pCenter textStyles">
+      <div id="dotContain">
+        <div id="mainDot" class="ui-widget-content"><span class="dotScroll"></div>
+      </div>
+
+      <style>
+        #draggable { width: 150px; height: 150px; padding: 0.5em; }
+        </style>
+      <div class="scrollLine"></div>
+      
+      <div class="leftNav">
+        <div class="btn0 navFocus">Overview</div>
+        <div class="dots1 dots">
+          <span class="dot"></span><span class="dot"></span>
+        </div>
+        <div class="btn1">Research</div>
+        <div class="dots2 dots">
+          <span class="dot"></span><span class="dot"></span>
+        </div>
+        <div class="btn2">Definition</div>
+        <div class="dots3 dots">
+          <span class="dot"></span><span class="dot"></span>
+        </div>
+        <div class="btn3">Ideation</div>
+        <div class="dots4 dots">
+          <span class="dot"></span><span class="dot"></span>
+        </div>
+        <div class="btn4">Prototyping</div>
+        <div class="dots5 dots">
+          <span class="dot"></span><span class="dot"></span>
+        </div>
+        <div class="btn5">Testing</div>
+        <div class="dots6 dots">
+          <span class="dot"></span><span class="dot"></span>
+        </div>
+        <div class="btn6">Conclusion</div>
+      </div>
+    </div><!-- End Sidebar -->
+    <div id="p2s0" class="pSection0 pOverview section pCenter textStyles">
       <div class="pTitle">
         <h4>DoHS</h4>
       </div>
@@ -384,7 +420,7 @@
         </div>
       </div>
     </div>
-    <div class="pSection1 section pLeft textStyles">
+    <div id="p2s1" class="pSection1 section pLeft textStyles">
       <div class="pTitle">
         <h4>Research</h4>
       </div>
@@ -398,7 +434,7 @@
         </div>
       </div>
     </div>
-    <div class="pSection2 section pRight textStyles">
+    <div id="p2s2" class="pSection2 section pRight textStyles">
       <div class="pTitle">
         <h4>Definition</h4>
       </div>
@@ -412,7 +448,7 @@
         </div>
       </div>
     </div>
-    <div class="pSection3 section pLeft textStyles">
+    <div id="p2s3" class="pSection3 section pLeft textStyles">
       <div class="pTitle">
         <h4>Ideation</h4>
       </div>
@@ -426,7 +462,7 @@
         </div>
       </div>
     </div>
-    <div class="pSection4 section pRight textStyles">
+    <div id="p2s4" class="pSection4 section pRight textStyles">
       <div class="pTitle">
         <h4>Prototyping</h4>
       </div>
@@ -440,7 +476,7 @@
         </div>
       </div>
     </div>
-    <div class="pSection5 section pLeft textStyles">
+    <div id="p2s5" class="pSection5 section pLeft textStyles">
       <div class="pTitle">
         <h4>Testing</h4>
       </div>
@@ -454,7 +490,7 @@
         </div>
       </div>
     </div>
-    <div class="pSection6 section pCenter textStyles">
+    <div id="p2s6" class="pSection6 section pCenter textStyles">
       <div class="pTitle">
         <h4>Conclusion</h4>
       </div>
@@ -469,29 +505,54 @@
       </div>
     </div>
   </section><!-- End Project 2 Content -->
+
+  <!-- Start Project 3 Content -->
   <section id="p3Content" class="pContent hide">
-    <div id="sidebar">
-      <div class="leftNav">
-          <ul class="leftNavList">
-              <li><span class="dot"></span></li>
-              <li>About Me</li>
-              <li><span class="dot"></span></li>
-              <li><span class="dot"></span></li>
-              <li><span class="dot"></span></li>
-              <li>My Skills</li>
-              <li><span class="dot"></span></li>
-              <li><span class="dot"></span></li>
-              <li><span class="dot"></span></li>
-              <li>My Work</li>
-              <li><span class="dot"></span></li>
-              <li><span class="dot"></span></li>
-              <li><span class="dot"></span></li>
-              <li>Contact</li>
-              <li><span class="dot"></span></li>
-          </ul>
+    <div class="sidebar">
+      
+      <div class="scrollBar">
+        <div class="scrollArrowUp"><img src="img/arrow-up.png"></div>
+        <div class="scrollArrowDown"><img src="img/arrow-down.png"></div>
       </div>
+      <div id="dotContain">
+        <div id="mainDot" class="ui-widget-content"><span class="dotScroll"></div>
+      </div>
+
+      <style>
+        #draggable { width: 150px; height: 150px; padding: 0.5em; }
+        </style>
+      <div class="scrollLine"></div>
+      
+      <div class="leftNav">
+        <div class="btn0 navFocus">Overview</div>
+        <div class="dots1 dots">
+          <span class="dot"></span><span class="dot"></span>
+        </div>
+        <div class="btn1">Research</div>
+        <div class="dots2 dots">
+          <span class="dot"></span><span class="dot"></span>
+        </div>
+        <div class="btn2">Definition</div>
+        <div class="dots3 dots">
+          <span class="dot"></span><span class="dot"></span>
+        </div>
+        <div class="btn3">Ideation</div>
+        <div class="dots4 dots">
+          <span class="dot"></span><span class="dot"></span>
+        </div>
+        <div class="btn4">Prototyping</div>
+        <div class="dots5 dots">
+          <span class="dot"></span><span class="dot"></span>
+        </div>
+        <div class="btn5">Testing</div>
+        <div class="dots6 dots">
+          <span class="dot"></span><span class="dot"></span>
+        </div>
+        <div class="btn6">Conclusion</div>
+      </div>
+    </div><!-- End Sidebar -->
     </div>
-    <div class="pOverview section pCenter textStyles">
+    <div id="p3s0" class="pOverview section pCenter textStyles">
       <div class="pTitle">
         <h4>RescueCats</h4>
       </div>
@@ -505,7 +566,7 @@
         </div>
       </div>
     </div>
-    <div class="pSection1 section pLeft textStyles">
+    <div id="p3s1" class="pSection1 section pLeft textStyles">
       <div class="pTitle">
         <h4>Research</h4>
       </div>
@@ -519,7 +580,7 @@
         </div>
       </div>
     </div>
-    <div class="pSection2 section pRight textStyles">
+    <div id="p3s2" class="pSection2 section pRight textStyles">
       <div class="pTitle">
         <h4>Definition</h4>
       </div>
@@ -533,7 +594,7 @@
         </div>
       </div>
     </div>
-    <div class="pSection3 section pLeft textStyles">
+    <div id="p3s3" class="pSection3 section pLeft textStyles">
       <div class="pTitle">
         <h4>Ideation</h4>
       </div>
@@ -547,7 +608,7 @@
         </div>
       </div>
     </div>
-    <div class="pSection4 section pRight textStyles">
+    <div id="p3s4" class="pSection4 section pRight textStyles">
       <div class="pTitle">
         <h4>Prototyping</h4>
       </div>
@@ -561,7 +622,7 @@
         </div>
       </div>
     </div>
-    <div class="pSection5 section pLeft textStyles">
+    <div id="p3s5" class="pSection5 section pLeft textStyles">
       <div class="pTitle">
         <h4>Testing</h4>
       </div>
@@ -575,7 +636,7 @@
         </div>
       </div>
     </div>
-    <div class="pSection6 section pCenter textStyles">
+    <div id="p3s6" class="pSection6 section pCenter textStyles">
       <div class="pTitle">
         <h4>Conclusion</h4>
       </div>
