@@ -2,6 +2,43 @@ body {
 
 }
 
+.cartWrapper {
+  position: relative;
+  top: 200px;
+  width: 100px;
+  height: 100px;
+  right: 10vw;
+  border: 5px solid black;
+  z-index: -1;
+}
+.cart {
+  background-color: white;
+  height: 70px;
+  width: 70px;
+  border: 8px solid rgba(0,174,239,1);
+  border-radius: 50px;
+  position: absolute;
+  left: 20vw;
+  top: 30vh;
+  animation: x 4s linear forwards,
+    y 4s cubic-bezier(0.0, .05, 0.12, -2000) forwards;
+  animation-delay: 0s, 0s;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes x {
+  to {
+    left: 40vw;
+  }
+}
+
+@keyframes y {
+  to {
+    top: 29.99vh;
+  }
+}
+
 /* Navigation */
 #navBar {
   display: flex;
