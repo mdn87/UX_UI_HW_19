@@ -1,11 +1,11 @@
-let canvas = document.getElementById("cart");
+let canvas = document.getElementById("orbitCanvas");
 let ctx = canvas.getContext("2d");
 let width = (canvas.width = window.innerWidth);
 let height = (canvas.height = window.innerHeight);
 
 let tail;
 
-let cart = document.getElementById("the-cart");
+let orb = document.getElementById("orb");
 
 let last = Date.now();
 
@@ -32,13 +32,13 @@ class Tail {
 }
 
 let startAnimation = () => {
-  let newOffset = getOffset(cart);
+  let newOffset = getOffset(orb);
   //tail.move(newOffset.left, newOffset.top);
   window.requestAnimationFrame(startAnimation);
 };
 
 window.onload = function () {
-  let offset = getOffset(cart);
+  let offset = getOffset(orb);
   //tail = new Tail(offset.left, offset.top);
   window.requestAnimationFrame(startAnimation);
 };
