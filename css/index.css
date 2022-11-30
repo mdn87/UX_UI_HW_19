@@ -2,41 +2,88 @@ body {
 
 }
 
-.cartWrapper {
-  position: relative;
-  top: 200px;
-  width: 100px;
-  height: 100px;
-  right: 10vw;
-  border: 5px solid black;
-  z-index: -1;
+
+#planetMover {
+  width: 250px;
+  height: 250px;
+  border: 17px solid green;
+
 }
-.cart {
-  background-color: white;
-  height: 70px;
-  width: 70px;
-  border: 8px solid rgba(0,174,239,1);
-  border-radius: 50px;
-  position: absolute;
-  left: 20vw;
-  top: 30vh;
+#orbMover {
+  width: 50px;
+  height: 50px;
+  border: 15px solid red;
+  left: 0;
+  top: 0;
   animation: x 4s linear forwards,
-    y 4s cubic-bezier(0.0, .05, 0.12, -2000) forwards;
+    y 4s linear forwards;
   animation-delay: 0s, 0s;
   animation-iteration-count: infinite;
+
+}
+#orb {
+  background-color: white;
+  height: 64px;
+  width: 64px;
+  border: 6px solid rgba(0,174,239,1);
+  border-radius: 50px;
+}
+#planet1 {
+  right: 110px;
+  top: 130px;
+  z-index: -1 !important;
+}
+#orbit {
+  right: 502px;
+  top: 268px;
+  z-index: -2;
 }
 
 
 @keyframes x {
   to {
-    left: 40vw;
+    left: 120px;
   }
 }
 
 @keyframes y {
   to {
-    top: 29.99vh;
+    top: 100px;
   }
+}
+
+/* Hero Animation */
+.anim {
+  position: absolute;
+  z-index: -1;
+}
+#heroImg {
+  z-index: 0;
+}
+#cloud1 {
+  top: 230px;
+}
+#cloud2 {
+  top: 280px;
+  left: 440px;
+}
+#star1 {
+  top: 255px;
+  right: 150px;
+}
+#star2 {
+  top: 220px;
+  right: 70px;
+}
+
+
+#planet2 {
+  top: 250px;
+  left: 100px;
+}
+#rocket {
+  top: 450px;
+  left: 0;
 }
 
 /* Navigation */
@@ -388,43 +435,7 @@ h4 {
   box-sizing: unset;
 }
 
-/* Hero Animation */
-.anim {
-  position: absolute;
-  z-index: -1;
-}
-#heroImg {
-  z-index: 1;
-}
-#cloud1 {
-  top: 230px;
-}
-#cloud2 {
-  top: 280px;
-  left: 440px;
-}
-#star1 {
-  top: 255px;
-  right: 150px;
-}
-#star2 {
-  top: 220px;
-  right: 70px;
-}
-#planet1 {
-  right: 300px;
-  top: 140px;
-  z-index: -2;
-}
-#orbit {
-  right: 502px;
-  top: 268px;
-  z-index: -2;
-}
-#planet2 {
-  top: 250px;
-  left: 100px;
-}
+
 
 
 
@@ -474,7 +485,7 @@ h4 {
   color: rgba(0,174,239,0)
 }
 
-/* Media Queries */
+/* Media Queries 
 @media only screen and (max-width: 1200px) {
   #mainContent {
     margin: 0px 1%;
@@ -558,4 +569,4 @@ h4 {
     "projDesc projImg"
     ;
   }
-}
+}*/
